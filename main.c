@@ -19,9 +19,18 @@
  */
 int main(int argc, char** argv) {
     int user_input ;
+    float whole_number_check ;
     do  {
         printf ("Zadejte celé číslo v intervalu <1 , 5>\n") ;
-        scanf ("%d", &user_input) ;        
+        scanf ("%f", &whole_number_check) ;
+       if (fmod(whole_number_check, 1) > 0)
+       {
+           printf("Číslo není celé.\n") ;
+           break;
+       }
+          user_input = whole_number_check;  
+            
+        
         if (user_input == 1)  
          printf ("Qapla\'\nnoH QapmeH wo\' Qaw\'lu'chugh yay chavbe\'lu\' \'ej wo\' choqmeH may\' DoHlu\'chugh lujbe\'lu\'.\n") ; 
         
